@@ -22,7 +22,8 @@ The current dashboard uses 3 tags to breakdown usage. Make sure to replace those
 
 ```hcl
 module "datadog_usage_reporting_dashboard" {
-  source = "../../assets/datadog_usage_reporting_dashboard"
+  # source = "../../assets/datadog_usage_reporting_dashboard"
+  source = "git::https://github.com/nxnarbais/datadog-share.git//assets/datadog_usage_reporting_dashboard?ref=<version_tag>"
 
   teams = ["team:dataiker"]
   title_suffix = " - Managed by Terraform"

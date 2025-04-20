@@ -14,6 +14,7 @@ provider "datadog" {
 
 module "datadog_usage_reporting_dashboard" {
 	source = "../../assets/datadog_usage_reporting_dashboard"
+	# source = "git::https://github.com/nxnarbais/datadog-share.git//assets/datadog_usage_reporting_dashboard?ref=0.11"
 
 	teams = ["team:dataiker"]
 	title_suffix = " - Managed by Terraform"
@@ -30,6 +31,7 @@ output "datadog_usage_reporting_dashboard_id" {
 
 module "kubernetes_capacity_planning_dashboard" {
 	source = "../../assets/kubernetes_capacity_planning_dashboard"
+	# source = "git::https://github.com/nxnarbais/datadog-share.git//assets/kubernetes_capacity_planning_dashboard?ref=0.11"
 
 	teams = ["team:dataiker"]
 	title_suffix = " - Managed by Terraform"

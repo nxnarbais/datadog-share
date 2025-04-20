@@ -4,6 +4,8 @@
 
 Various assets and scripts shared with the community.
 
+Looking to visualize dashboard by popularity and score, check our website: [share.dataiker.com](https://share.dataiker.com)
+
 ## Resources
 
 - [datadog_usage_reporting_dashboard](assets/datadog_usage_reporting_dashboard/)

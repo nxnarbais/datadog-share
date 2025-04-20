@@ -16,7 +16,8 @@ The current dashboard uses an estimate of $10/cpu_core/month. Replace if needed.
 
 ```hcl
 module "kubernetes_capacity_planning_dashboard" {
-  source = "../../assets/kubernetes_capacity_planning_dashboard"
+  # source = "../../assets/kubernetes_capacity_planning_dashboard"
+  source = "git::https://github.com/nxnarbais/datadog-share.git//assets/kubernetes_capacity_planning_dashboard?ref=<version_tag>"
 
   teams = ["team:dataiker"]
   title_suffix = " - Managed by Terraform"

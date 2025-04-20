@@ -7129,6 +7129,27 @@ resource "datadog_dashboard_json" "datadog_usage_reporting" {
 							"width": 12,
 							"height": 11
 					}
+			},
+			{
+					"id": 7034658301114627,
+					"definition": {
+							"type": "note",
+							"content": "**with <3 from [Dataiker](https://app.dataiker.com)** - [original dashboard](https://github.com/nxnarbais/datadog-share/tree/main/assets/datadog_usage_reporting_dashboard)",
+							"background_color": "blue",
+							"font_size": "14",
+							"text_align": "left",
+							"vertical_align": "top",
+							"show_tick": false,
+							"tick_pos": "50%",
+							"tick_edge": "right",
+							"has_padding": true
+					},
+					"layout": {
+							"x": 0,
+							"y": 0,
+							"width": 12,
+							"height": 1
+					}
 			}
 	],
 	"template_variables": [
