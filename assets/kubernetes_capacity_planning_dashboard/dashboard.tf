@@ -2,7 +2,7 @@ resource "datadog_dashboard_json" "kubernetes_capacity_planning" {
   dashboard = <<EOF
 {
     "title": "[Dataiker][Kubernetes] Capacity Planning${var.title_suffix}",
-    "description": "Use this dashboard to set a relevant CPU and Memory requests on your pods and save money meanwhile.\n\n${var.managed_by_terraform}",
+    "description": "Use this dashboard to set a relevant CPU and Memory requests on your pods and save money meanwhile.\n\n[[suggested_dashboards]]\n\n${var.managed_by_terraform}",
     "widgets": [
         {
             "id": 443466849361936,
@@ -1854,8 +1854,8 @@ resource "datadog_dashboard_json" "kubernetes_capacity_planning" {
                 "content": "**with <3 from [Dataiker](https://app.dataiker.com)** - [original dashboard](https://github.com/nxnarbais/datadog-share/tree/main/assets/kubernetes_capacity_planning_dashboard)",
                 "background_color": "blue",
                 "font_size": "14",
-                "text_align": "left",
-                "vertical_align": "top",
+                "text_align": "center",
+                "vertical_align": "center",
                 "show_tick": false,
                 "tick_pos": "50%",
                 "tick_edge": "right",

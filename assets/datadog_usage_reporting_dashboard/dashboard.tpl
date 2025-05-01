@@ -27,7 +27,7 @@
 					"id": 1371410848677903,
 					"definition": {
 							"type": "note",
-							"content": "## How to\n\nAdapt it to your needs:\n1. Export the dashboard\n2. Replace `cost_center`, `department`, `team` by the relevant tags\n3. Import back the dashboard",
+							"content": "## How to\n\nAdapt it to your needs:\n1. Export the dashboard\n2. Replace `${tag1}`, `${tag2}`, `${tag3}` by the relevant tags\n3. Import back the dashboard",
 							"background_color": "gray",
 							"font_size": "14",
 							"text_align": "left",
@@ -371,25 +371,25 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query3",
 																					"aggregator": "max"
@@ -505,25 +505,25 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.agent.running{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.agent.running{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.agent.running{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.agent.running{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.agent.running{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.agent.running{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.agent.running{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.agent.running{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query3",
 																					"aggregator": "max"
@@ -903,25 +903,25 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.apm_hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.apm_hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.apm_hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.apm_hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.apm_hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.apm_hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.apm_hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.apm_hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query3",
 																					"aggregator": "max"
@@ -1037,25 +1037,25 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.apm.host_instance{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.apm.host_instance{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.apm.host_instance{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.apm.host_instance{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.apm.host_instance{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.apm.host_instance{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.apm.host_instance{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.apm.host_instance{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query3",
 																					"aggregator": "max"
@@ -1383,19 +1383,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.metrics.custom.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.metrics.custom.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.metrics.custom.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.metrics.custom.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.metrics.custom.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.metrics.custom.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "avg"
@@ -1830,19 +1830,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.apm.ingested_bytes.by_tag{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.apm.ingested_bytes.by_tag{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.apm.ingested_bytes.by_tag{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.apm.ingested_bytes.by_tag{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.apm.ingested_bytes.by_tag{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.apm.ingested_bytes.by_tag{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -1947,19 +1947,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.apm.ingested_bytes.by_tag{$cost_center,$department,$team} by {service}.as_count()",
+																					"query": "sum:datadog.estimated_usage.apm.ingested_bytes.by_tag{${filter_string}} by {service}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.apm.ingested_bytes.by_tag{$cost_center,$department,$team} by {service}.as_count()",
+																					"query": "sum:datadog.estimated_usage.apm.ingested_bytes.by_tag{${filter_string}} by {service}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.apm.ingested_bytes.by_tag{$cost_center,$department,$team} by {service}.as_count()",
+																					"query": "sum:datadog.estimated_usage.apm.ingested_bytes.by_tag{${filter_string}} by {service}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -2276,19 +2276,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.apm.indexed_spans.by_tag{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.apm.indexed_spans.by_tag{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.apm.indexed_spans.by_tag{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.apm.indexed_spans.by_tag{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.apm.indexed_spans.by_tag{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.apm.indexed_spans.by_tag{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -2393,19 +2393,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.apm.indexed_spans.by_tag{$cost_center,$department,$team} by {service}.as_count()",
+																					"query": "sum:datadog.estimated_usage.apm.indexed_spans.by_tag{${filter_string}} by {service}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.apm.indexed_spans.by_tag{$cost_center,$department,$team} by {service}.as_count()",
+																					"query": "sum:datadog.estimated_usage.apm.indexed_spans.by_tag{${filter_string}} by {service}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.apm.indexed_spans.by_tag{$cost_center,$department,$team} by {service}.as_count()",
+																					"query": "sum:datadog.estimated_usage.apm.indexed_spans.by_tag{${filter_string}} by {service}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -2722,19 +2722,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -2839,19 +2839,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{$cost_center,$department,$team} by {datadog_index}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{${filter_string}} by {datadog_index}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{$cost_center,$department,$team} by {datadog_index}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{${filter_string}} by {datadog_index}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{$cost_center,$department,$team} by {datadog_index}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{${filter_string}} by {datadog_index}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -2956,19 +2956,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{$cost_center,$department,$team} by {service}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{${filter_string}} by {service}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{$cost_center,$department,$team} by {service}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{${filter_string}} by {service}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{$cost_center,$department,$team} by {service}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_bytes{${filter_string}} by {service}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -3285,19 +3285,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_events{$cost_center,$department,$team,datadog_is_excluded:false} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_events{${filter_string},datadog_is_excluded:false} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_events{$cost_center,$department,$team,datadog_is_excluded:false} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_events{${filter_string},datadog_is_excluded:false} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_events{$cost_center,$department,$team,datadog_is_excluded:false} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_events{${filter_string},datadog_is_excluded:false} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -3402,19 +3402,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_events{$cost_center,$department,$team,datadog_is_excluded:false} by {datadog_index}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_events{${filter_string},datadog_is_excluded:false} by {datadog_index}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_events{$cost_center,$department,$team,datadog_is_excluded:false} by {datadog_index}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_events{${filter_string},datadog_is_excluded:false} by {datadog_index}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_events{$cost_center,$department,$team,datadog_is_excluded:false} by {datadog_index}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_events{${filter_string},datadog_is_excluded:false} by {datadog_index}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -3519,19 +3519,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_events{$cost_center,$department,$team,datadog_is_excluded:false} by {service}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_events{${filter_string},datadog_is_excluded:false} by {service}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_events{$cost_center,$department,$team,datadog_is_excluded:false} by {service}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_events{${filter_string},datadog_is_excluded:false} by {service}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.logs.ingested_events{$cost_center,$department,$team,datadog_is_excluded:false} by {service}.as_count()",
+																					"query": "sum:datadog.estimated_usage.logs.ingested_events{${filter_string},datadog_is_excluded:false} by {service}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -3848,19 +3848,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.synthetics.api_test_runs{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.synthetics.api_test_runs{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.synthetics.api_test_runs{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.synthetics.api_test_runs{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.synthetics.api_test_runs{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.synthetics.api_test_runs{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -3965,19 +3965,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.synthetics.api_test_runs{$cost_center,$department,$team} by {url}.as_count()",
+																					"query": "sum:datadog.estimated_usage.synthetics.api_test_runs{${filter_string}} by {url}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.synthetics.api_test_runs{$cost_center,$department,$team} by {url}.as_count()",
+																					"query": "sum:datadog.estimated_usage.synthetics.api_test_runs{${filter_string}} by {url}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.synthetics.api_test_runs{$cost_center,$department,$team} by {url}.as_count()",
+																					"query": "sum:datadog.estimated_usage.synthetics.api_test_runs{${filter_string}} by {url}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -4294,19 +4294,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.synthetics.browser_test_runs{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.synthetics.browser_test_runs{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.synthetics.browser_test_runs{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.synthetics.browser_test_runs{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.synthetics.browser_test_runs{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.synthetics.browser_test_runs{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -4411,19 +4411,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.synthetics.browser_test_runs{$cost_center,$department,$team} by {start_url}.as_count()",
+																					"query": "sum:datadog.estimated_usage.synthetics.browser_test_runs{${filter_string}} by {start_url}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.synthetics.browser_test_runs{$cost_center,$department,$team} by {start_url}.as_count()",
+																					"query": "sum:datadog.estimated_usage.synthetics.browser_test_runs{${filter_string}} by {start_url}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.synthetics.browser_test_runs{$cost_center,$department,$team} by {start_url}.as_count()",
+																					"query": "sum:datadog.estimated_usage.synthetics.browser_test_runs{${filter_string}} by {start_url}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -4740,19 +4740,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.serverless.aws_lambda_functions.by_tag{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.serverless.aws_lambda_functions.by_tag{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.serverless.aws_lambda_functions.by_tag{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.serverless.aws_lambda_functions.by_tag{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.serverless.aws_lambda_functions.by_tag{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.serverless.aws_lambda_functions.by_tag{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "avg"
@@ -5069,19 +5069,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.serverless.invocations.by_tag{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.serverless.invocations.by_tag{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.serverless.invocations.by_tag{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.serverless.invocations.by_tag{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.serverless.invocations.by_tag{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:datadog.estimated_usage.serverless.invocations.by_tag{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -5186,19 +5186,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:aws.lambda.enhanced.invocations{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:aws.lambda.enhanced.invocations{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:aws.lambda.enhanced.invocations{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:aws.lambda.enhanced.invocations{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:aws.lambda.enhanced.invocations{$cost_center,$department,$team} by {cost_center,department,team}.as_count()",
+																					"query": "sum:aws.lambda.enhanced.invocations{${filter_string}} by {${group_by_string}}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -5971,19 +5971,19 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.rum.sessions{$cost_center,$department,$team} by {env,application.id,service,source,sku}.as_count()",
+																					"query": "sum:datadog.estimated_usage.rum.sessions{${filter_string}} by {env,application.id,service,source,sku}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.rum.sessions{$cost_center,$department,$team} by {env,application.id,service,source,sku}.as_count()",
+																					"query": "sum:datadog.estimated_usage.rum.sessions{${filter_string}} by {env,application.id,service,source,sku}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "sum"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.rum.sessions{$cost_center,$department,$team} by {env,application.id,service,source,sku}.as_count()",
+																					"query": "sum:datadog.estimated_usage.rum.sessions{${filter_string}} by {env,application.id,service,source,sku}.as_count()",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "sum"
@@ -6352,25 +6352,25 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.profiling.hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.profiling.hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.profiling.hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.profiling.hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.profiling.hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.profiling.hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.profiling.hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.profiling.hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query3",
 																					"aggregator": "max"
@@ -6486,25 +6486,25 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.profiling.agent{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.profiling.agent{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.profiling.agent{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.profiling.agent{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.profiling.agent{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.profiling.agent{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.profiling.agent{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.profiling.agent{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query3",
 																					"aggregator": "max"
@@ -6884,25 +6884,25 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.estimated_usage.network.hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.network.hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.network.hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.network.hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.network.hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.network.hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.estimated_usage.network.hosts.by_tag{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.estimated_usage.network.hosts.by_tag{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query3",
 																					"aggregator": "max"
@@ -7018,25 +7018,25 @@
 																	"response_format": "scalar",
 																	"queries": [
 																			{
-																					"query": "sum:datadog.system_probe.agent.network_tracer{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.system_probe.agent.network_tracer{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query1",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.system_probe.agent.network_tracer{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.system_probe.agent.network_tracer{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query2",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.system_probe.agent.network_tracer{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.system_probe.agent.network_tracer{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query4",
 																					"aggregator": "avg"
 																			},
 																			{
-																					"query": "sum:datadog.system_probe.agent.network_tracer{$cost_center,$department,$team} by {cost_center,department,team}",
+																					"query": "sum:datadog.system_probe.agent.network_tracer{${filter_string}} by {${group_by_string}}",
 																					"data_source": "metrics",
 																					"name": "query3",
 																					"aggregator": "max"
@@ -7152,20 +7152,20 @@
 	],
 	"template_variables": [
 			{
-					"name": "cost_center",
-					"prefix": "cost_center",
+					"name": "${tag1}",
+					"prefix": "${tag1}",
 					"available_values": [],
 					"default": "*"
 			},
 			{
-					"name": "department",
-					"prefix": "department",
+					"name": "${tag2}",
+					"prefix": "${tag2}",
 					"available_values": [],
 					"default": "*"
 			},
 			{
-					"name": "team",
-					"prefix": "team",
+					"name": "${tag3}",
+					"prefix": "${tag3}",
 					"available_values": [],
 					"default": "*"
 			},
