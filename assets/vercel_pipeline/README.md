@@ -46,4 +46,3 @@ The pipeline filters logs with the source "vercel" and applies several processor
 ## Usage
 
 The pipeline is automatically enabled and processes all logs with the source "vercel". The processors are applied in sequence to transform and enrich the log data with additional context and metadata.
-

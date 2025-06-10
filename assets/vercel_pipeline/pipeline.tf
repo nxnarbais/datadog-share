@@ -11,7 +11,7 @@ resource "datadog_logs_custom_pipeline" "vercel_pipeline" {
 			is_enabled = true
 			source_type = "attribute"
 			target_type = "tag"
-			sources = ["@projectName"]
+			sources = ["projectName"]
 			target = "project_name"
 			override_on_conflict = false
 			preserve_source = true
@@ -23,7 +23,7 @@ resource "datadog_logs_custom_pipeline" "vercel_pipeline" {
 			is_enabled = true
 			source_type = "attribute"
 			target_type = "tag"
-			sources = ["@environment"]
+			sources = ["environment"]
 			target = "environment"
 			override_on_conflict = false
 			preserve_source = true
@@ -31,11 +31,11 @@ resource "datadog_logs_custom_pipeline" "vercel_pipeline" {
 	}
 	processor {
 		attribute_remapper {
-			name = "@environment to environment"
+			name = "@environment to env"
 			is_enabled = true
 			source_type = "attribute"
 			target_type = "tag"
-			sources = ["@environment"]
+			sources = ["environment"]
 			target = "env"
 			override_on_conflict = false
 			preserve_source = true
@@ -82,7 +82,7 @@ resource "datadog_logs_custom_pipeline" "vercel_pipeline" {
 			is_enabled = true
 			source_type = "attribute"
 			target_type = "tag"
-			sources = ["@team"]
+			sources = ["team"]
 			target = "team"
 			override_on_conflict = false
 			preserve_source = true
